@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane id="AnchorPane" maxHeight="480.0" maxWidth="343.0" minWidth="-Infinity" prefHeight="480.0" prefWidth="343.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="computerengineeringcalculator.CalculatorController">
+   <children>
+      <AnchorPane layoutX="-45.0" layoutY="-67.0" prefHeight="265.0" prefWidth="433.0">
+         <children>
+            <Button layoutX="61.0" layoutY="219.0" mnemonicParsing="false" onAction="#decToHex" prefHeight="46.0" prefWidth="96.0" text="Dec -&gt; Hex" />
+            <Button layoutX="63.0" layoutY="162.0" mnemonicParsing="false" onAction="#decToBin" prefHeight="46.0" prefWidth="91.0" text="Dec -&gt; Bin" AnchorPane.topAnchor="162.0" />
+            <Button layoutX="165.0" layoutY="162.0" mnemonicParsing="false" onAction="#binToDec" prefHeight="46.0" prefWidth="96.0" text="Bin -&gt; Dec" />
+            <Button layoutX="269.0" layoutY="162.0" mnemonicParsing="false" onAction="#hexToDec" prefHeight="46.0" prefWidth="96.0" text="Hex -&gt; Dec" />
+            <Button layoutX="269.0" layoutY="219.0" mnemonicParsing="false" onAction="#hexToBin" prefHeight="46.0" prefWidth="96.0" text="Hex -&gt; Bin" />
+            <Button layoutX="165.0" layoutY="219.0" mnemonicParsing="false" onAction="#binToHex" prefHeight="46.0" prefWidth="96.0" text="Bin -&gt; Hex" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="46.0" layoutX="97.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
+            <Label fx:id="outputLabel" layoutX="118.0" layoutY="106.0" prefHeight="22.0" prefWidth="206.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="-255.0" layoutY="-31.0" mnemonicParsing="false" text="Button" />
+      <AnchorPane layoutX="13.0" layoutY="213.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="317.0">
+         <children>
+            <Button layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#acButton" prefHeight="46.0" prefWidth="53.0" text="AC" />
+            <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#numSeven" prefHeight="46.0" prefWidth="53.0" text="7" />
+            <Button layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#numEight" prefHeight="46.0" prefWidth="53.0" text="8" />
+            <Button layoutX="133.0" layoutY="14.0" mnemonicParsing="false" onAction="#numNine" prefHeight="46.0" prefWidth="53.0" text="9" />
+            <Button layoutX="193.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="46.0" prefWidth="53.0" text="DEL" />
+            <Button layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFour" prefHeight="46.0" prefWidth="53.0" text="4" />
+            <Button layoutX="69.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFive" prefHeight="46.0" prefWidth="53.0" text="5" />
+            <Button layoutX="10.0" layoutY="131.0" mnemonicParsing="false" onAction="#numOne" prefHeight="46.0" prefWidth="53.0" text="1" />
+            <Button layoutX="69.0" layoutY="131.0" mnemonicParsing="false" onAction="#numTwo" prefHeight="46.0" prefWidth="53.0" text="2" />
+            <Button layoutX="131.0" layoutY="72.0" mnemonicParsing="false" onAction="#numSix" prefHeight="46.0" prefWidth="53.0" text="6" />
+            <Button layoutX="131.0" layoutY="131.0" mnemonicParsing="false" onAction="#numThree" prefHeight="46.0" prefWidth="53.0" text="3" />
+            <Button layoutX="10.0" layoutY="189.0" mnemonicParsing="false" onAction="#numZero" prefHeight="46.0" prefWidth="53.0" text="0" />
+            <Button layoutX="69.0" layoutY="189.0" mnemonicParsing="false" onAction="#dotButton" prefHeight="46.0" prefWidth="53.0" text="." />
+            <Button layoutX="131.0" layoutY="189.0" mnemonicParsing="false" onAction="#expButton" prefHeight="46.0" prefWidth="53.0" text="EXP" />
+            <Button layoutX="193.0" layoutY="72.0" mnemonicParsing="false" onAction="#multiplyButton" prefHeight="46.0" prefWidth="53.0" text="X" />
+            <Button layoutX="258.0" layoutY="72.0" mnemonicParsing="false" onAction="#divideButton" prefHeight="46.0" prefWidth="53.0" text="/" />
+            <Button layoutX="193.0" layoutY="131.0" mnemonicParsing="false" onAction="#addButton" prefHeight="46.0" prefWidth="53.0" text="+" />
+            <Button layoutX="258.0" layoutY="131.0" mnemonicParsing="false" onAction="#subtractButton" prefHeight="46.0" prefWidth="53.0" text="-" />
+            <Button layoutX="193.0" layoutY="189.0" mnemonicParsing="false" onAction="#prevAnsButton" prefHeight="46.0" prefWidth="53.0" text="Ans" />
+            <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="46.0" prefWidth="53.0" text="=" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
