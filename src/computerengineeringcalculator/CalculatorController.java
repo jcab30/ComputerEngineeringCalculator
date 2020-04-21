@@ -43,27 +43,32 @@ public class CalculatorController implements Initializable
  
        @FXML 
        private void decToHex(ActionEvent event) { 
-              
+              answerLabel.setText(Calculator.decToHex(Integer.parseInt(outputLabel.getText())));
        } 
  
        @FXML 
        private void decToBin(ActionEvent event) { 
+              answerLabel.setText(""+Calculator.decToBin(Integer.parseInt(outputLabel.getText())));
        } 
  
        @FXML 
        private void binToDec(ActionEvent event) { 
+              answerLabel.setText(""+Calculator.binToDec(Integer.parseInt(outputLabel.getText())));
        } 
  
        @FXML 
        private void hexToDec(ActionEvent event) { 
+              answerLabel.setText(""+Calculator.hexToDec(outputLabel.getText()));
        } 
  
        @FXML 
        private void hexToBin(ActionEvent event) { 
+              answerLabel.setText(""+Calculator.hexToBin(outputLabel.getText()));
        } 
  
        @FXML 
        private void binToHex(ActionEvent event) { 
+              answerLabel.setText(""+Calculator.binToHex(Integer.parseInt(outputLabel.getText())));
        } 
         
         
@@ -166,6 +171,7 @@ public class CalculatorController implements Initializable
        @FXML 
        private void acButton(ActionEvent event) { 
               outputLabel.setText(""); 
+              answerLabel.setText("");
        } 
  
        @FXML 
@@ -175,6 +181,7 @@ public class CalculatorController implements Initializable
               outputLabel.setText(currentOutput.substring(0,currentOutput.length()-1)); 
        } 
         
+       //not implemented yet
         @FXML 
        private void prevAnsButton(ActionEvent event) { 
               outputLabel.setText(outputLabel.getText()+",Ans,"); 
@@ -199,12 +206,45 @@ public class CalculatorController implements Initializable
                             case "*":
                                    lastNum *= Double.parseDouble(operate[++i]);
                                    break;
+                            case "/":
+                                   lastNum /= Double.parseDouble(operate[++i]);
                      }
               }
               
               answerLabel.setText(lastNum+"");
               
        } 
+
+       
+       //storage and letter buttons
+       @FXML
+       private void buttonA(ActionEvent event) {
+              outputLabel.setText(outputLabel.getText()+ "A"); 
+       }
+       
+       @FXML
+       private void buttonB(ActionEvent event) {
+               outputLabel.setText(outputLabel.getText()+ "B"); 
+       }
+       @FXML
+       private void buttonC(ActionEvent event) {
+               outputLabel.setText(outputLabel.getText()+ "C"); 
+       }
+       
+       @FXML
+       private void buttonD(ActionEvent event) {
+               outputLabel.setText(outputLabel.getText()+ "D"); 
+       }
+       
+       @FXML
+       private void buttonE(ActionEvent event) {
+               outputLabel.setText(outputLabel.getText()+ "E"); 
+       }
+
+       @FXML
+       private void buttonF(ActionEvent event) {
+               outputLabel.setText(outputLabel.getText()+ "F"); 
+       }
 
 
      

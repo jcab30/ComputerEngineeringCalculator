@@ -122,7 +122,7 @@ public class Calculator
         * <li>Effects: returns binary representation of passed integer
         * </ul>
         */
-       public static int decToBin(int num){
+       public static String decToBin(int num){
               
               String binRep = "";
               
@@ -133,8 +133,12 @@ public class Calculator
                             binRep = "0"+binRep;       
                      num /= 2;
               }
+              
+              while(binRep.length() < 4)
+                     binRep = '0'+binRep;
              
-              return  Integer.parseInt(binRep);
+             
+              return binRep;
        }
        
        /**
@@ -213,7 +217,7 @@ public class Calculator
        }
     
        
-       private static int hexToNibble(String hex){
+       private static String hexToNibble(String hex){
               
               hex = hex.toUpperCase();
               // change to decimal represenation
@@ -225,19 +229,19 @@ public class Calculator
                      
                      switch(hex){
                             case "A":
-                                   return 1010;
+                                   return "1010";
                             case "B":
-                                   return 1011;
+                                   return "1011";
                             case "C":
-                                   return 1100;
+                                   return "1100";
                             case "D":
-                                   return 1101;
+                                   return "1101";
                             case "E":
-                                   return 1110;
+                                   return "1110";
                             case "F":
-                                   return 1111;     
+                                   return "1111";     
                             default:
-                                   return 0;
+                                   return "0";
                      }   
               }
        }

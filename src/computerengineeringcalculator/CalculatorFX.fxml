@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" maxHeight="480.0" maxWidth="343.0" minWidth="-Infinity" prefHeight="480.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computerengineeringcalculator.CalculatorController">
+<AnchorPane id="AnchorPane" maxHeight="536.0" maxWidth="343.0" minWidth="-Infinity" prefHeight="536.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computerengineeringcalculator.CalculatorController">
    <children>
       <AnchorPane layoutX="-45.0" layoutY="-67.0" prefHeight="265.0" prefWidth="433.0">
          <children>
@@ -21,7 +21,7 @@
          </children>
       </AnchorPane>
       <Button layoutX="-255.0" layoutY="-31.0" mnemonicParsing="false" text="Button" />
-      <AnchorPane layoutX="13.0" layoutY="213.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="317.0">
+      <AnchorPane layoutX="15.0" layoutY="271.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="314.0">
          <children>
             <Button layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#acButton" prefHeight="46.0" prefWidth="53.0" text="AC" />
             <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#numSeven" prefHeight="46.0" prefWidth="53.0" text="7" />
@@ -45,5 +45,11 @@
             <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="46.0" prefWidth="53.0" text="=" />
          </children>
       </AnchorPane>
+      <Button layoutX="23.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonA" prefHeight="46.0" prefWidth="38.0" text="A" />
+      <Button layoutX="118.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonC" prefHeight="46.0" prefWidth="38.0" text="C" />
+      <Button layoutX="213.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonE" prefHeight="46.0" prefWidth="38.0" text="E" />
+      <Button layoutX="70.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonB" prefHeight="46.0" prefWidth="38.0" text="B" />
+      <Button layoutX="164.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonD" prefHeight="46.0" prefWidth="38.0" text="D" />
+      <Button layoutX="263.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonF" prefHeight="46.0" prefWidth="38.0" text="F" />
    </children>
 </AnchorPane>
