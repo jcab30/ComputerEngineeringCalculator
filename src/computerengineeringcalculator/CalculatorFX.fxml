@@ -2,54 +2,330 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="536.0" maxWidth="343.0" minWidth="-Infinity" prefHeight="536.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computerengineeringcalculator.CalculatorController">
+<AnchorPane id="AnchorPane" maxHeight="536.0" maxWidth="343.0" minWidth="-Infinity" prefHeight="536.0" prefWidth="343.0" style="-fx-background-color: black; -fx-border-color: grey; -fx-border-width: 8.0; -fx-border-image-width: 5.0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computerengineeringcalculator.CalculatorController">
    <children>
-      <AnchorPane layoutX="-45.0" layoutY="-67.0" prefHeight="265.0" prefWidth="433.0">
+      <AnchorPane layoutX="-44.0" layoutY="-61.0" prefHeight="265.0" prefWidth="433.0">
          <children>
-            <Button layoutX="61.0" layoutY="219.0" mnemonicParsing="false" onAction="#decToHex" prefHeight="46.0" prefWidth="96.0" text="Dec -&gt; Hex" />
-            <Button layoutX="63.0" layoutY="162.0" mnemonicParsing="false" onAction="#decToBin" prefHeight="46.0" prefWidth="91.0" text="Dec -&gt; Bin" AnchorPane.topAnchor="162.0" />
-            <Button layoutX="165.0" layoutY="162.0" mnemonicParsing="false" onAction="#binToDec" prefHeight="46.0" prefWidth="96.0" text="Bin -&gt; Dec" />
-            <Button layoutX="269.0" layoutY="162.0" mnemonicParsing="false" onAction="#hexToDec" prefHeight="46.0" prefWidth="96.0" text="Hex -&gt; Dec" />
-            <Button layoutX="269.0" layoutY="219.0" mnemonicParsing="false" onAction="#hexToBin" prefHeight="46.0" prefWidth="96.0" text="Hex -&gt; Bin" />
-            <Button layoutX="165.0" layoutY="219.0" mnemonicParsing="false" onAction="#binToHex" prefHeight="46.0" prefWidth="96.0" text="Bin -&gt; Hex" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="66.0" layoutX="94.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="238.0" />
-            <Label fx:id="outputLabel" layoutX="110.0" layoutY="95.0" prefHeight="22.0" prefWidth="206.0" />
-            <Label fx:id="answerLabel" layoutX="110.0" layoutY="122.0" prefHeight="22.0" prefWidth="206.0" />
+            <Button layoutX="61.0" layoutY="219.0" mnemonicParsing="false" onAction="#decToHex" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Dec-&gt; Hex">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="63.0" layoutY="162.0" mnemonicParsing="false" onAction="#decToBin" prefHeight="46.0" prefWidth="91.0" style="-fx-background-color: grey;" text="Dec-&gt; Bin" AnchorPane.topAnchor="162.0">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="42.38250000000001" radius="21.565625000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="165.0" layoutY="162.0" mnemonicParsing="false" onAction="#binToDec" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Bin-&gt; Dec">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="269.0" layoutY="162.0" mnemonicParsing="false" onAction="#hexToDec" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Hex-&gt; Dec">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="269.0" layoutY="219.0" mnemonicParsing="false" onAction="#hexToBin" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Hex-&gt; Bin">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="165.0" layoutY="219.0" mnemonicParsing="false" onAction="#binToHex" prefHeight="46.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Bin-&gt; Hex">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5d5f61" height="66.0" layoutX="94.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="238.0">
+               <effect>
+                  <Glow level="0.29">
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Glow>
+               </effect></Rectangle>
+            <Label fx:id="outputLabel" layoutX="109.0" layoutY="90.0" prefHeight="22.0" prefWidth="206.0" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Emoji" size="22.0" />
+               </font></Label>
+            <Label fx:id="answerLabel" layoutX="109.0" layoutY="122.0" prefHeight="22.0" prefWidth="206.0" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Emoji" size="17.0" />
+               </font></Label>
          </children>
+         <effect>
+            <Blend />
+         </effect>
       </AnchorPane>
       <Button layoutX="-255.0" layoutY="-31.0" mnemonicParsing="false" text="Button" />
       <AnchorPane layoutX="15.0" layoutY="271.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="314.0">
          <children>
-            <Button layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#acButton" prefHeight="46.0" prefWidth="53.0" text="AC" />
-            <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#numSeven" prefHeight="46.0" prefWidth="53.0" text="7" />
-            <Button layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#numEight" prefHeight="46.0" prefWidth="53.0" text="8" />
-            <Button layoutX="133.0" layoutY="14.0" mnemonicParsing="false" onAction="#numNine" prefHeight="46.0" prefWidth="53.0" text="9" />
-            <Button layoutX="193.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="46.0" prefWidth="53.0" text="DEL" />
-            <Button layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFour" prefHeight="46.0" prefWidth="53.0" text="4" />
-            <Button layoutX="69.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFive" prefHeight="46.0" prefWidth="53.0" text="5" />
-            <Button layoutX="10.0" layoutY="131.0" mnemonicParsing="false" onAction="#numOne" prefHeight="46.0" prefWidth="53.0" text="1" />
-            <Button layoutX="69.0" layoutY="131.0" mnemonicParsing="false" onAction="#numTwo" prefHeight="46.0" prefWidth="53.0" text="2" />
-            <Button layoutX="131.0" layoutY="72.0" mnemonicParsing="false" onAction="#numSix" prefHeight="46.0" prefWidth="53.0" text="6" />
-            <Button layoutX="131.0" layoutY="131.0" mnemonicParsing="false" onAction="#numThree" prefHeight="46.0" prefWidth="53.0" text="3" />
-            <Button layoutX="10.0" layoutY="189.0" mnemonicParsing="false" onAction="#numZero" prefHeight="46.0" prefWidth="53.0" text="0" />
-            <Button layoutX="69.0" layoutY="189.0" mnemonicParsing="false" onAction="#dotButton" prefHeight="46.0" prefWidth="53.0" text="." />
-            <Button layoutX="131.0" layoutY="189.0" mnemonicParsing="false" onAction="#expButton" prefHeight="46.0" prefWidth="53.0" text="EXP" />
-            <Button layoutX="193.0" layoutY="72.0" mnemonicParsing="false" onAction="#multiplyButton" prefHeight="46.0" prefWidth="53.0" text="X" />
-            <Button layoutX="258.0" layoutY="72.0" mnemonicParsing="false" onAction="#divideButton" prefHeight="46.0" prefWidth="53.0" text="/" />
-            <Button layoutX="193.0" layoutY="131.0" mnemonicParsing="false" onAction="#addButton" prefHeight="46.0" prefWidth="53.0" text="+" />
-            <Button layoutX="258.0" layoutY="131.0" mnemonicParsing="false" onAction="#subtractButton" prefHeight="46.0" prefWidth="53.0" text="-" />
-            <Button layoutX="193.0" layoutY="189.0" mnemonicParsing="false" onAction="#prevAnsButton" prefHeight="46.0" prefWidth="53.0" text="Ans" />
-            <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="46.0" prefWidth="53.0" text="=" />
+            <Button layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#acButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: magenta;" text="AC">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#numSeven" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="7">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="69.0" layoutY="14.0" mnemonicParsing="false" onAction="#numEight" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="8">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="131.0" layoutY="14.0" mnemonicParsing="false" onAction="#numNine" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="9">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="193.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: magenta;" text="DEL">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFour" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="4">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="69.0" layoutY="72.0" mnemonicParsing="false" onAction="#numFive" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="5">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="10.0" layoutY="131.0" mnemonicParsing="false" onAction="#numOne" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="1">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="69.0" layoutY="131.0" mnemonicParsing="false" onAction="#numTwo" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="2">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="131.0" layoutY="72.0" mnemonicParsing="false" onAction="#numSix" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="6">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="131.0" layoutY="131.0" mnemonicParsing="false" onAction="#numThree" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="3">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="10.0" layoutY="189.0" mnemonicParsing="false" onAction="#numZero" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text="0">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="69.0" layoutY="189.0" mnemonicParsing="false" onAction="#dotButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: grey;" text=".">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="131.0" layoutY="189.0" mnemonicParsing="false" onAction="#expButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="EXP">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="193.0" layoutY="72.0" mnemonicParsing="false" onAction="#multiplyButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="X">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="258.0" layoutY="72.0" mnemonicParsing="false" onAction="#divideButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="/">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="193.0" layoutY="131.0" mnemonicParsing="false" onAction="#addButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="+">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="258.0" layoutY="131.0" mnemonicParsing="false" onAction="#subtractButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="-">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="193.0" layoutY="189.0" mnemonicParsing="false" onAction="#prevAnsButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="Ans">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
+            <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#equalButton" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: orange;" text="=">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="16.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+               </effect></Button>
          </children>
       </AnchorPane>
-      <Button layoutX="23.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonA" prefHeight="46.0" prefWidth="38.0" text="A" />
-      <Button layoutX="118.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonC" prefHeight="46.0" prefWidth="38.0" text="C" />
-      <Button layoutX="213.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonE" prefHeight="46.0" prefWidth="38.0" text="E" />
-      <Button layoutX="70.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonB" prefHeight="46.0" prefWidth="38.0" text="B" />
-      <Button layoutX="164.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonD" prefHeight="46.0" prefWidth="38.0" text="D" />
-      <Button layoutX="263.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonF" prefHeight="46.0" prefWidth="38.0" text="F" />
+      <Button layoutX="23.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonA" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="A">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
+      <Button layoutX="118.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonC" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="C">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
+      <Button layoutX="213.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonE" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="E">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
+      <Button layoutX="70.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonB" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="B">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
+      <Button layoutX="164.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonD" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="D">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
+      <Button layoutX="263.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonF" prefHeight="46.0" prefWidth="38.0" style="-fx-background-color: blue; -fx-background-radius: 5.0;" text="F">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00aceb" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <effect>
+            <InnerShadow color="#4b5479" height="38.885000000000005" radius="20.691250000000004" width="45.88" />
+         </effect></Button>
    </children>
+   <effect>
+      <InnerShadow />
+   </effect>
 </AnchorPane>
